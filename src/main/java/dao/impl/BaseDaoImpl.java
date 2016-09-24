@@ -22,6 +22,22 @@ public class BaseDaoImpl implements BaseDao {
     protected final String changeLineStr = "\n";
 
     /**
+     * 保存文件
+     * @param fileContent
+     * @throws Exception
+     */
+    protected void save(String fileContent) throws Exception{
+        try {
+            File file = new File(filePath);
+            FileWriter fw = new FileWriter(file);
+            fw.write(fileContent);
+            fw.close();
+        }catch (Exception e){
+            throw new MyException("save file erro!");
+        }
+    }
+
+    /**
      * 清空记录
      * @throws Exception
      */
@@ -128,7 +144,7 @@ public class BaseDaoImpl implements BaseDao {
             if (s.indexOf(request.getUsername()) == 0) {
                 String moneys[] = request.getPaymoney().split(";");
                 for (String item : moneys){
-                    s += (item + "," + dateFormat.format(Calendar.getInstance().getTime()) + ","
+                    s += (Double.parseDouble(item) + "," + dateFormat.format(Calendar.getInstance().getTime()) + ","
                             + author + ",");
                 }
             }

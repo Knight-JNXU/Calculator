@@ -29,4 +29,8 @@ public class CharacterDaoImpl extends BaseDaoImpl implements CharacterDao {
         clearFile();
     }
 
+    public void deleteRecord(String fileContent) throws Exception {
+        save(fileContent);
+    }
+
 }

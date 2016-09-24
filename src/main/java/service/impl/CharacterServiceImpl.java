@@ -153,4 +153,36 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
     public void clear() throws Exception {
         characterDao.clear();
     }
+
+    public void deleteRecord(Record record) throws Exception {
+        String characterStr = characterDao.getAllCharacters();
+        String lineStrs[] = characterStr.split("\\\n");
+        String line = "";
+        String resultStr = "";
+        for(String item : lineStrs){
+            if(item.contains(record.getCharactername())){
+                line = item;
+            }else{
+                resultStr += item + "\n";
+            }
+        }
+        String recordStrs[] = line.split(",");
+        String temp = "";
+        boolean isDelete = false;
+        for(int i=0; i<recordStrs.length; i++){
+            if(recordStrs[i].equals(record.getMoney())
+                    && recordStrs[i+1].equals(record.getDate())
+                    && recordStrs[i+2].equals(record.getAuthor())
+                    && isDelete==false){
+                i = i+2;
+                isDelete = true;
+            }else{
+                temp += (recordStrs[i]+",");
+            }
+        }
+        resultStr += temp;
+        System.out.println("deleted:");
+        System.out.println(resultStr);
+        characterDao.deleteRecord(resultStr);
+    }
 }

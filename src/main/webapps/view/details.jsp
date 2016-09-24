@@ -22,6 +22,7 @@
 <link rel="stylesheet" type="text/css" href="../css/mystyle.css"/>
 <link href="../css/jquery.searchableSelect.css" rel="stylesheet" type="text/css">
 <script src="../js/jquery.searchableSelect.js"></script>
+<script src="../js/myjs.js"></script>
 <body>
 <input type="button" class="myButton" value="Home"
        onclick="window.location='/characterController/getAllCharacter'"
@@ -59,7 +60,9 @@
                 <td>${i.date}</td>
                 <td>${i.author}</td>
                 <td><input type="button" value="Delete" class="myButton"
-                           style="height:auto;padding: 3 2"></td>
+                           style="height:auto;padding: 3 2;"
+                           onclick="deleteButton('${item.name}','${i.pay}','${i.date}','${i.author}',
+                                   '/characterController/deleteRecord')"></td>
             </tr>
         </c:forEach>
     </c:forEach>

@@ -40,10 +40,15 @@
                            class="button_blue"
                            onclick="window.location='/userController/goAddUser'"/>
 
-                    <input type="button" value="共同财物"
+                    <input type="button" value="HOME"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"
                            onclick="window.location='/characterController/getAllCharacter'"/>
+
+                    <input type="button" value="DETAIL"
+                           style="width:150px;margin-top: 20px;"
+                           class="button_blue"
+                           onclick="window.location='/characterController/showDetails'"/>
 
                     <input type="button" value="清   空"
                            style="width:150px;margin-top: 20px;"

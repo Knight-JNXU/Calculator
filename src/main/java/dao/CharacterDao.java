@@ -1,6 +1,7 @@
 package dao;
 
 import model.AddCharacterRequest;
+import model.Record;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,5 +17,7 @@ public interface CharacterDao extends BaseDao {
     public void operateCharacter(String characterName, String operateType) throws Exception;
 
     public void clear() throws Exception;
+
+    public void deleteRecord(String fileContent) throws Exception;
 
 }

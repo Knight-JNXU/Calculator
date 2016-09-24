@@ -11,7 +11,14 @@ function chekcSubmit() {
     }
     return true;
 }
-function deleteButton(charactername, money, date, author) {
-
+function deleteButton(charactername, m, d, a, u) {
+    $.ajax({
+        type:'POST',
+        url:u,
+        dataType:'json',
+        data:{charactername:charactername,
+            money:m, date:d, author:a}
+    });
+    window.location.reload();
 }
 

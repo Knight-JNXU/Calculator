@@ -29,8 +29,7 @@
     <div class="web_qr_login" id="web_qr_login" style="display: block; height: auto;">
 
         <input id="chlist" type="hidden" name="characterList" value='${characters }'/>
-        <div id="container" style="width: 300px; height: 300px; margin: 0 auto"
-             onclick="window.location.href='/characterController/showDetails'"></div>
+        <div id="container" style="width: 300px; height: 300px; margin: 0 auto"></div>
 
         <div class="web_login" id="web_login">
             <div class="login-box">

@@ -33,8 +33,9 @@
 
                 <div class="login_form">
                     <form action="/userController/addUser" name="loginform" accept-charset="utf-8" id="login_form"
-                          class="loginForm" method="post" onsubmit="return chekcSubmit();"><input type="hidden" name="did"
-                                                                                          value="0"/>
+                          class="loginForm" method="post" onsubmit="return chekcSubmit();"><input type="hidden"
+                                                                                                  name="did"
+                                                                                                  value="0"/>
                         <input type="hidden" name="to" value="log"/>
                         <div class="uinArea" id="uinArea">
                             <label class="input-tips" for="u">帐号：</label>
@@ -58,10 +59,16 @@
                             </div>
                         </div>
 
-                        <div style="padding-left:50px;margin-top:20px;margin-left: 15px;"><input type="submit"
-                                                                                                 value="ADD"
-                                                                                                 style="width:150px;"
-                                                                                                 class="button_blue"/>
+                        <div style="padding-left:50px;margin-top:20px;margin-left: 15px;">
+                            <input type="submit"
+                                   value="ADD"
+                                   style="width:150px;"
+                                   class="button_blue"/>
+                            <input type="button"
+                                   value="Cancel"
+                                   style="width:150px;"
+                                   class="button_blue"
+                                   onclick="window.location.href='/userController/goManager'"/>
                         </div>
                     </form>
                 </div>
