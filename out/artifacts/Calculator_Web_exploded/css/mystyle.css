@@ -1,0 +1,16 @@
+.myButton{
+    display: inline-block;
+    /*float: left;*/
+    height: 41px;
+    border-radius: 4px;
+    background: #2795dc;
+    border: none;
+    cursor: pointer;
+    border-bottom: 3px solid #0078b3;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+    text-align: center;
+    outline: none;
+    font-family: 'Microsoft Yahei',Arial, Helvetica, sans-serif;
+}
