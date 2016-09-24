@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df87371f-7766-4763-b8b3-9cd114af92cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/adduser.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/adduser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/details.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/details.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,7 +88,7 @@
       <file leaf-file-name="adduser.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapps/view/adduser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="281">
               <caret line="25" column="106" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
               <folding />
             </state>
@@ -227,8 +226,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="242" />
-    <option name="y" value="71" />
+    <option name="x" value="442" />
+    <option name="y" value="160" />
     <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
@@ -1149,7 +1148,7 @@
       <workItem from="1474543934833" duration="23000" />
       <workItem from="1474675593103" duration="15079000" />
       <workItem from="1474705021280" duration="1239000" />
-      <workItem from="1474709205998" duration="3830000" />
+      <workItem from="1474709205998" duration="4448000" />
     </task>
     <servers />
   </component>
@@ -1159,7 +1158,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189183000" />
+    <option name="totallyTimeSpent" value="189801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1171,7 +1170,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="242" y="71" width="1370" height="744" extended-state="0" />
+    <frame x="442" y="160" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1642,7 +1641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapps/view/adduser.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
+        <state relative-caret-position="281">
           <caret line="25" column="106" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
           <folding />
         </state>
