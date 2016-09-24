@@ -45,6 +45,11 @@
                            class="button_blue"
                            onclick="window.location='/characterController/getAllCharacter'"/>
 
+                    <input type="button" value="清   空"
+                           style="width:150px;margin-top: 20px;"
+                           class="button_blue"
+                           onclick="window.location='/characterController/clear'"/>
+
                     <input type="button" value="注   销"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"

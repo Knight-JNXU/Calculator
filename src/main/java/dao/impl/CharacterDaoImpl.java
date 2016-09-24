@@ -25,4 +25,8 @@ public class CharacterDaoImpl extends BaseDaoImpl implements CharacterDao {
         operateCharacterInFile(characterName, operateType);
     }
 
+    public void clear() throws Exception {
+        clearFile();
+    }
+
 }

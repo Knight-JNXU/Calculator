@@ -29,6 +29,15 @@ public class CharacterController extends BaseController{
     @Autowired
     private CharacterService characterService;
 
+    @RequestMapping(value = "/clear")
+    public String clear(Model model) throws Exception{
+        characterService.clear();
+        String resultStr = "清空成功!";
+        model.addAttribute("resultStr", resultStr);
+        model.addAttribute("targetUrl", "/userController/goManager");
+        return "result";
+    }
+
     @RequestMapping(value = "/operateCharacter", method = RequestMethod.POST)
     public String operateCharacter(HttpServletRequest request) throws Exception{
         String characterName = request.getParameter("characterName");

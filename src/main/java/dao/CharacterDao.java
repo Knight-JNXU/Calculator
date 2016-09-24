@@ -15,4 +15,6 @@ public interface CharacterDao extends BaseDao {
 
     public void operateCharacter(String characterName, String operateType) throws Exception;
 
+    public void clear() throws Exception;
+
 }

@@ -15,4 +15,5 @@ public interface CharacterService extends BaseService {
     public List<PayRelationShip> calculatEveryPay(List<CharacterModel> characterModels);
     public void addPayMoney(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception;
     public void operateCharacter(String characterName, String operateType) throws Exception;
+    public void clear() throws Exception;
 }

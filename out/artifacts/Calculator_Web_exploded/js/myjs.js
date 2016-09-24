@@ -11,4 +11,7 @@ function chekcSubmit() {
     }
     return true;
 }
+function deleteButton(charactername, money, date, author) {
+
+}
 

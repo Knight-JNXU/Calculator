@@ -149,4 +149,8 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
     public void operateCharacter(String characterName, String operateType) throws Exception {
         characterDao.operateCharacter(characterName, operateType);
     }
+
+    public void clear() throws Exception {
+        characterDao.clear();
+    }
 }
