@@ -221,10 +221,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="y" value="98" />
+    <option name="x" value="-247" />
+    <option name="y" value="76" />
     <option name="width" value="1370" />
-    <option name="height" value="727" />
+    <option name="height" value="731" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1223,7 +1223,7 @@
       <workItem from="1474459050265" duration="767000" />
       <workItem from="1474469610073" duration="2436000" />
       <workItem from="1474543934833" duration="23000" />
-      <workItem from="1474675593103" duration="224000" />
+      <workItem from="1474675593103" duration="607000" />
     </task>
     <servers />
   </component>
@@ -1233,7 +1233,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169259000" />
+    <option name="totallyTimeSpent" value="169642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1245,7 +1245,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="98" width="1370" height="727" extended-state="1" />
+    <frame x="-247" y="76" width="1370" height="731" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
