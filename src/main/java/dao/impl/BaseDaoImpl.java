@@ -3,6 +3,8 @@ package dao.impl;
 import constant.MyException;
 import dao.BaseDao;
 import model.AddCharacterRequest;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
@@ -13,11 +15,17 @@ import java.util.concurrent.Exchanger;
 /**
  * Created by Knigh on 2016/9/3.
  */
+@ComponentScan
 public class BaseDaoImpl implements BaseDao {
 
-    protected final String filePath = "../file/character.txt";
-    protected final String userFilePath = "../file/users.txt";
-    protected final String trashPath = "../file/trash";
+//    protected final String filePath = "../file/character.txt";
+//    protected final String userFilePath = "../file/users.txt";
+//    protected final String trashPath = "../file/trash";
+    @Value("#{mysettings.urlHeader}")
+    protected String urlHeader;
+    protected final String filePath = "/file/character.txt";
+    protected final String userFilePath = "/file/users.txt";
+    protected final String trashPath = "/file/trash";
     protected final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
     protected final String changeLineStr = "\n";
 
@@ -28,7 +36,7 @@ public class BaseDaoImpl implements BaseDao {
      */
     protected void save(String fileContent) throws Exception{
         try {
-            File file = new File(filePath);
+            File file = new File(urlHeader+filePath);
             FileWriter fw = new FileWriter(file);
             fw.write(fileContent);
             fw.close();
@@ -42,14 +50,14 @@ public class BaseDaoImpl implements BaseDao {
      * @throws Exception
      */
     public void clearFile() throws Exception{
-        File file = new File(trashPath);
+        File file = new File(urlHeader+trashPath);
         if(!file.exists()){
             file.mkdir();
         }
         int fileLength = file.listFiles().length;
-        String newFilePath = trashPath+"/trash"+fileLength+".txt";
-        copyFile(filePath, newFilePath);
-        delFile(filePath);
+        String newFilePath = urlHeader+trashPath+"/trash"+fileLength+".txt";
+        copyFile(urlHeader+filePath, newFilePath);
+        delFile(urlHeader+filePath);
     }
 
     /**
@@ -136,7 +144,7 @@ public class BaseDaoImpl implements BaseDao {
      * @throws Exception
      */
     public void addPayMoneyInFile(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception {
-        String fileStr = readFileByLines(filePath);
+        String fileStr = readFileByLines(urlHeader+filePath);
         String fileStrs[] = fileStr.split("\n");
         fileStr = "";
         String author = (String) httpServletRequest.getSession().getAttribute("user");
@@ -151,7 +159,7 @@ public class BaseDaoImpl implements BaseDao {
             fileStr += (s + changeLineStr);
         }
         try {
-            File file = new File(filePath);
+            File file = new File(urlHeader+filePath);
             FileWriter fw = new FileWriter(file);
             fw.write(fileStr);
             fw.close();
@@ -204,7 +212,7 @@ public class BaseDaoImpl implements BaseDao {
      * @throws Exception
      */
     public void operateCharacterInFile(String characterName, String operateType) throws Exception {
-        String fileStr = readFileByLines(filePath);
+        String fileStr = readFileByLines(urlHeader+filePath);
         if (operateType.equals("add")) {
             if (fileStr.contains(characterName)) {
                 throw new MyException("character exist!");
@@ -223,7 +231,7 @@ public class BaseDaoImpl implements BaseDao {
             }
         }
         try {
-            File file = new File(filePath);
+            File file = new File(urlHeader+filePath);
             FileWriter fw = new FileWriter(file);
             fw.write(fileStr);
             fw.close();

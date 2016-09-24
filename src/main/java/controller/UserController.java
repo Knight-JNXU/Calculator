@@ -38,7 +38,7 @@ public class UserController {
             resultStr = "添加 user 成功！";
         }
         model.addAttribute("resultStr", resultStr);
-        model.addAttribute("targetUrl", "/userController/goAddUser");
+        model.addAttribute("targetUrl", (request.getContextPath()+"/userController/goAddUser"));
         return "result";
     }
 

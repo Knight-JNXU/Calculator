@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner">
     <div class="banner-matter">
         <h2>公共财物管理系统</h2>
-        <a href="/loginController/go" class="down">Go</a>
+        <a href="<%=request.getContextPath()%>/loginController/go" class="down">Go</a>
     </div>
 </div>
 <!--footer-->

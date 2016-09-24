@@ -66,7 +66,7 @@
                 <input type="button" value="Details"
                        style="width:150px;margin-top: 20px;margin-left: 70px;"
                        class="button_blue"
-                       onclick="window.location.href='/characterController/showDetails'"/>
+                       onclick="window.location.href='<%=request.getContextPath()%>/characterController/showDetails'"/>
             </ul>
         </div>
     </div>

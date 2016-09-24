@@ -16,5 +16,12 @@
         <!-- 设置编码格式 -->
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
+    <bean id="mysettings" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:mysettings.properties</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>

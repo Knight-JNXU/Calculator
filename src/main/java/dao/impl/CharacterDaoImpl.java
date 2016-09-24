@@ -14,7 +14,7 @@ import java.io.File;
 public class CharacterDaoImpl extends BaseDaoImpl implements CharacterDao {
 
     public String getAllCharacters() throws Exception{
-        return readFileByLines(filePath);
+        return readFileByLines(urlHeader+filePath);
     }
 
     public void addPayMoney(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception{

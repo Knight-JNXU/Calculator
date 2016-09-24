@@ -25,10 +25,10 @@
 <script src="../js/myjs.js"></script>
 <body>
 <input type="button" class="myButton" value="Home"
-       onclick="window.location='/characterController/getAllCharacter'"
+       onclick="window.location='<%=request.getContextPath()%>/characterController/getAllCharacter'"
        style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">
 <input type="button" class="myButton" value="Logout"
-       onclick="window.location='/userController/logout'"
+       onclick="window.location='<%=request.getContextPath()%>/userController/logout'"
        style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">
 <h4>明细表</h4>
 <table id="table1" class="display" cellspacing="0" width="100%"

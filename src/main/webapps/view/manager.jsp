@@ -38,27 +38,27 @@
                     <input type="button" value="添加用户"
                            style="width:150px;"
                            class="button_blue"
-                           onclick="window.location='/userController/goAddUser'"/>
+                           onclick="window.location='<%=request.getContextPath()%>/userController/goAddUser'"/>
 
                     <input type="button" value="HOME"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"
-                           onclick="window.location='/characterController/getAllCharacter'"/>
+                           onclick="window.location='<%=request.getContextPath()%>/characterController/getAllCharacter'"/>
 
                     <input type="button" value="DETAIL"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"
-                           onclick="window.location='/characterController/showDetails'"/>
+                           onclick="window.location='<%=request.getContextPath()%>/characterController/showDetails'"/>
 
                     <input type="button" value="清   空"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"
-                           onclick="window.location='/characterController/clear'"/>
+                           onclick="window.location='<%=request.getContextPath()%>/characterController/clear'"/>
 
                     <input type="button" value="注   销"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"
-                           onclick="window.location='/userController/logout'"/>
+                           onclick="window.location='<%=request.getContextPath()%>/userController/logout'"/>
                 </div>
 
             </div>

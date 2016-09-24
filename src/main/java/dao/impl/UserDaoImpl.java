@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDaoImpl extends BaseDaoImpl implements UserDao {
     public boolean addUser(String user, String passwd) throws Exception {
-        return addUserInFile(user, passwd, userFilePath);
+        return addUserInFile(user, passwd, (urlHeader+userFilePath));
     }
 }

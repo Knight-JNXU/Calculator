@@ -37,11 +37,11 @@ public class CharacterController extends BaseController{
     }
 
     @RequestMapping(value = "/clear")
-    public String clear(Model model) throws Exception{
+    public String clear(HttpServletRequest request, Model model) throws Exception{
         characterService.clear();
         String resultStr = "清空成功!";
         model.addAttribute("resultStr", resultStr);
-        model.addAttribute("targetUrl", "/userController/goManager");
+        model.addAttribute("targetUrl", (request.getContextPath()+"/userController/goManager"));
         return "result";
     }
 

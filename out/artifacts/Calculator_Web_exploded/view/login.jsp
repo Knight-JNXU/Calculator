@@ -30,7 +30,7 @@
             <div class="login-box">
 
                 <div class="login_form">
-                    <form action="/loginController/login" name="loginform" accept-charset="utf-8" id="login_form"
+                    <form action="<%=request.getContextPath()%>/loginController/login" name="loginform" accept-charset="utf-8" id="login_form"
                           class="loginForm" method="post"><input type="hidden" name="did" value="0"/>
                         <input type="hidden" name="to" value="log"/>
                         <div class="uinArea" id="uinArea">

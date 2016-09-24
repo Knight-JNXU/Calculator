@@ -32,7 +32,7 @@
             <div class="login-box">
 
                 <div class="login_form">
-                    <form action="/userController/addUser" name="loginform" accept-charset="utf-8" id="login_form"
+                    <form action="<%=request.getContextPath()%>/userController/addUser" name="loginform" accept-charset="utf-8" id="login_form"
                           class="loginForm" method="post" onsubmit="return chekcSubmit();"><input type="hidden"
                                                                                                   name="did"
                                                                                                   value="0"/>
@@ -68,7 +68,7 @@
                                    value="Cancel"
                                    style="width:150px;"
                                    class="button_blue"
-                                   onclick="window.location.href='/userController/goManager'"/>
+                                   onclick="window.location.href='<%=request.getContextPath()%>/userController/goManager'"/>
                         </div>
                     </form>
                 </div>
