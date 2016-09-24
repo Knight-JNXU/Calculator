@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df87371f-7766-4763-b8b3-9cd114af92cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mysettings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/CharacterDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/CharacterDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/LoginDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/LoginDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/CharacterDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/CharacterDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/LoginDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/LoginDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/adduser.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/adduser.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/details.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/home.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/manager.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/view/manager.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/BaseDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BaseDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/CharacterDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/CharacterDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/adduser.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/adduser.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/details.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/view/manager.jsp" afterPath="$PROJECT_DIR$/src/main/webapps/view/manager.jsp" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapps/view/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="22">
+              <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -115,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CharacterServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/CharacterServiceImpl.java">
+      <file leaf-file-name="adduser.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapps/view/adduser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+            <state relative-caret-position="77">
+              <caret line="25" column="106" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -218,11 +189,9 @@
         <option value="$PROJECT_DIR$/src/main/java/service/impl/CharacterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapps/js/myjs.js" />
         <option value="$PROJECT_DIR$/src/main/webapps/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapps/view/adduser.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapps/view/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapps/view/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapps/view/manager.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapps/view/details.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/userInfo.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/settings.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
@@ -232,6 +201,8 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/BaseDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapps/view/details.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapps/view/adduser.jsp" />
       </list>
     </option>
   </component>
@@ -256,8 +227,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="294" />
-    <option name="y" value="9" />
+    <option name="x" value="242" />
+    <option name="y" value="71" />
     <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
@@ -562,7 +533,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java Foundation" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -1178,7 +1149,7 @@
       <workItem from="1474543934833" duration="23000" />
       <workItem from="1474675593103" duration="15079000" />
       <workItem from="1474705021280" duration="1239000" />
-      <workItem from="1474709205998" duration="2120000" />
+      <workItem from="1474709205998" duration="3830000" />
     </task>
     <servers />
   </component>
@@ -1188,7 +1159,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187473000" />
+    <option name="totallyTimeSpent" value="189183000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1200,7 +1171,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="294" y="9" width="1370" height="744" extended-state="0" />
+    <frame x="242" y="71" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1221,11 +1192,11 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24045801" sideWeight="0.46791443" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22824427" sideWeight="0.53208554" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29502574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29502574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.406518" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.406518" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.52918285" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1525,14 +1496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapps/view/adduser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapps/view/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1671,8 +1634,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapps/view/details.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="22">
+          <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapps/view/adduser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="25" column="106" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
           <folding />
         </state>
       </provider>

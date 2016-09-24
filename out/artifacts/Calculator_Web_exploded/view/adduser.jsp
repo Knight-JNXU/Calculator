@@ -23,7 +23,7 @@
     </div>
 
 
-    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 320px;">
+    <div class="web_qr_login" id="web_qr_login" style="display: block; height: auto; padding-bottom: 30px;">
 
         <!--登录-->
         <div class="web_login" id="web_login">
@@ -66,7 +66,7 @@
                                    class="button_blue"/>
                             <input type="button"
                                    value="Cancel"
-                                   style="width:150px;"
+                                   style="width:150px;margin-top: 20px;"
                                    class="button_blue"
                                    onclick="window.location.href='<%=request.getContextPath()%>/userController/goManager'"/>
                         </div>

@@ -164,7 +164,6 @@
         </select>
         <input style="height: 32px; margin-left: 15px;"  placeholder="paymoney" type="text" name="paymoney"/>
         <input type="submit" class="myButton" value="ADD" style="margin-left: 30px;margin-top: 10px;padding: 3px 4px;">
-        <%--<input type="submit" class="myButton" value="ADD" style="margin-left: 30px;margin-top: 10px;">--%>
     </form>
 </div>
 <script>
