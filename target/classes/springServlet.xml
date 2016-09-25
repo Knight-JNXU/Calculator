@@ -33,6 +33,7 @@
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/loginController/go"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/loginController/login"/> <!-- 无需拦截的请求 -->
+            <mvc:exclude-mapping path="/userController/about"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/js/**"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/css/**"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/images/**"/> <!-- 无需拦截的请求 -->

@@ -16,6 +16,7 @@
     <!-- Custom Theme files -->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css" media="all" />
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="clearfix"> </div>
         </div>
         <div class="required">
-            <input type="submit" value="ABOUT" >
+            <input type="submit" value="ABOUT" onclick="window.location='<%=request.getContextPath()%>/userController/about'">
         </div>
         <div class="clearfix"> </div>
     </div>

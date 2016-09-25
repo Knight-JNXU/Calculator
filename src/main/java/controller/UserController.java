@@ -49,4 +49,9 @@ public class UserController {
         System.out.println("logout");
         return "login";
     }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String goAbout(){
+        return "about";
+    }
 }
