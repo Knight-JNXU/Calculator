@@ -28,7 +28,8 @@ public class AspectAdvice {
     5、*(..):最后这个星号表示方法名，*号表示所有的方法，后面括弧里面表示方法的参数，两个句点表示任何参数。
     可以查看 印象笔记 spring笔记 Aspectj 切入点（Pointcut）语法定义
      */
-    @Pointcut("execution (* controller..*.*(..)) || execution(* service..*.*(..)) || execution(* dao..*.*(..))")
+//    @Pointcut("execution (* controller..*.*(..)) || execution(* service..*.*(..)) || execution(* dao..*.*(..))")
+    @Pointcut("execution (* controller..*.*(..))")
     public void advicePointcut(){}
 
     /**
@@ -38,13 +39,8 @@ public class AspectAdvice {
      */
     @Before(value = "advicePointcut()")
     public void before(JoinPoint joinPoint) throws Exception{
-        String methodDes = getMethodDescription(joinPoint);
         Logger log = Logger.getLogger(joinPoint.getTarget().getClass());
-        if(!methodDes.equals("")){
-            log.info("before:method---" + methodDes + "---start!");
-        }else{
-            log.info("before:" + getMethodNameAndArgs(joinPoint));
-        }
+        log.info("before:" + getMethodNameAndArgs(joinPoint));
     }
 
     /**
@@ -54,13 +50,8 @@ public class AspectAdvice {
      */
     @After(value = "advicePointcut()")
     public void after(JoinPoint joinPoint) throws Exception{
-        String methodDes = getMethodDescription(joinPoint);
         Logger log = Logger.getLogger(joinPoint.getTarget().getClass());
-        if(!methodDes.equals("")){
-            log.info("after:method---" + methodDes + "---over!");
-        }else{
-            log.info("after:" + getMethodNameAndArgs(joinPoint));
-        }
+        log.info("after:" + getMethodNameAndArgs(joinPoint));
     }
 
     /**
@@ -95,12 +86,8 @@ public class AspectAdvice {
      */
     @AfterThrowing(value = "advicePointcut()", throwing = "exception")
     public void afterThrowing(JoinPoint joinPoint, Throwable exception) throws Exception{
-        String methodDes = getMethodDescription(joinPoint);
         Logger log = Logger.getLogger(joinPoint.getTarget().getClass());
         log.error("-------------------afterThrowing.handler.start-------------------");
-        if(methodDes.equals("")){
-            log.error("afterThrowing:method:" + methodDes);
-        }
         log.error(getMethodNameAndArgs(joinPoint));
         log.error("ConstantUtil.getTrace(e):" + getTrace(exception));
         log.error("exception name:" + exception.getClass().toString());

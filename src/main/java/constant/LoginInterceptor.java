@@ -1,4 +1,4 @@
-package controller;
+package constant;
 
 import org.springframework.web.servlet.AsyncHandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

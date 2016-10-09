@@ -38,7 +38,7 @@
             <mvc:exclude-mapping path="/css/**"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/images/**"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/fonts/**"/> <!-- 无需拦截的请求 -->
-            <bean class="controller.LoginInterceptor"></bean>
+            <bean class="constant.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
 
