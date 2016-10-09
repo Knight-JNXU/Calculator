@@ -1,5 +1,6 @@
 package controller;
 
+import model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +21,8 @@ public class LoginController extends BaseController {
     private LoginService loginService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(HttpServletRequest request, HttpServletResponse response) throws Exception{
-        if(loginService.checkLogin(request, response))
+    public String login(UserModel user, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        if(loginService.checkLogin(request))
         {
             if(request.getSession().getAttribute("manager")!=null &&
                     request.getSession().getAttribute("manager").equals("true")){

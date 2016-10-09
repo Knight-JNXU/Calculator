@@ -18,7 +18,7 @@ public class LoginDaoImpl extends BaseDaoImpl implements LoginDao {
     @Value(value = "#{userInfo.password}")
     private String passwd;
 
-    public boolean checkLogin(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    public boolean checkLogin(HttpServletRequest request) throws Exception{
         String un = request.getParameter("username");
         String pw = request.getParameter("password");
         String userFile = readFileByLines((urlHeader+userFilePath));

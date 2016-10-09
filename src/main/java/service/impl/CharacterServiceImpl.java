@@ -28,7 +28,7 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
         List<CharacterModel> characterModels = new ArrayList<CharacterModel>();
         for(String str : strs){
             String nameStrs[] = str.split(":");
-            if(nameStrs.length > 0){
+            if(nameStrs.length > 1){
                 String name = nameStrs[0];
                 List<Double> money = new ArrayList<Double>();
                 List<String> dates = new ArrayList<String>();
@@ -166,18 +166,18 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
                 resultStr += item + "\n";
             }
         }
-        String recordStrs[] = line.split(",");
-        String temp = "";
+        String nameData[] = line.split(":");
+        String recordStrs[] = nameData[1].split(",");
+        String temp = nameData[0]+":";
         boolean isDelete = false;
-        for(int i=0; i<recordStrs.length; i++){
+        for(int i=0; i<recordStrs.length; i+=3){
             if(recordStrs[i].equals(record.getMoney())
                     && recordStrs[i+1].equals(record.getDate())
                     && recordStrs[i+2].equals(record.getAuthor())
                     && isDelete==false){
-                i = i+2;
                 isDelete = true;
             }else{
-                temp += (recordStrs[i]+",");
+                temp += (recordStrs[i]+","+recordStrs[i+1]+","+recordStrs[2]+",");
             }
         }
         resultStr += temp;

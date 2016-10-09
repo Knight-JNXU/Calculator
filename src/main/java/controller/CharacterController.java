@@ -1,9 +1,6 @@
 package controller;
 
-import model.AddCharacterRequest;
-import model.CharacterModel;
-import model.PayRelationShip;
-import model.Record;
+import model.*;
 import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,9 +43,11 @@ public class CharacterController extends BaseController{
     }
 
     @RequestMapping(value = "/operateCharacter", method = RequestMethod.POST)
-    public String operateCharacter(HttpServletRequest request) throws Exception{
-        String characterName = request.getParameter("characterName");
-        String operateType = request.getParameter("operateType");
+    public String operateCharacter(OperateCharacterRequest request) throws Exception{
+//        String characterName = request.getParameter("characterName");
+//        String operateType = request.getParameter("operateType");
+        String characterName = request.getCharacterName();
+        String operateType = request.getOperateType();
         System.out.println("addCharacter");
         System.out.println("characterName:" + characterName);
         System.out.println("operateType:" + operateType);
@@ -84,7 +83,12 @@ public class CharacterController extends BaseController{
         for(CharacterModel item : list){
             all += item.getTotal();
         }
-        BigDecimal avg = new BigDecimal(all).divide(new BigDecimal(list.size()), 2, RoundingMode.HALF_DOWN);
+        BigDecimal avg;
+        if(all != 0){
+            avg = new BigDecimal(all).divide(new BigDecimal(list.size()), 2, RoundingMode.HALF_DOWN);
+        }else{
+            avg = new BigDecimal(all).divide(new BigDecimal(1), 2, RoundingMode.HALF_DOWN);
+        }
         model.addAttribute("avg", avg);
         model.addAttribute("characterlist", list);
         model.addAttribute("characters", JSONArray.fromObject(list).toString());
