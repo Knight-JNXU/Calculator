@@ -1,50 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df87371f-7766-4763-b8b3-9cd114af92cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/constant/AdviceLog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/constant/AspectAdvice.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/UserModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jcl_2_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_4_1.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/constant/MyException.class" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/constant/MyException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/dao/impl/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/constant/MyException.class" afterPath="$PROJECT_DIR$/target/classes/constant/MyException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/LoginDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/LoginDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/LoginDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/LoginDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/LoginService.class" afterPath="$PROJECT_DIR$/target/classes/service/LoginService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
+    <list default="true" id="df87371f-7766-4763-b8b3-9cd114af92cd" name="Default" comment="add log system">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator.iml" afterPath="$PROJECT_DIR$/Calculator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/mysettings.properties" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/mysettings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/springServlet.xml" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/classes/springServlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_Web_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/constant/MyException.java" afterPath="$PROJECT_DIR$/src/main/java/constant/MyException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/LoginDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/LoginDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/LoginDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/service/LoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mysettings.properties" afterPath="$PROJECT_DIR$/src/main/resources/mysettings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springServlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/springServlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapps/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mysettings.properties" afterPath="$PROJECT_DIR$/target/classes/mysettings.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springServlet.xml" afterPath="$PROJECT_DIR$/target/classes/springServlet.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/Calculator_Web_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Calculator_war_exploded.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
     </list>
     <ignored path="Calculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1233,8 +1191,16 @@
       <workItem from="1474709205998" duration="4523000" />
       <workItem from="1474727969443" duration="23000" />
       <workItem from="1474769802196" duration="6126000" />
-      <workItem from="1475976947120" duration="9234000" />
+      <workItem from="1475976947120" duration="9472000" />
     </task>
+    <task id="LOCAL-00001" summary="add log system">
+      <created>1475991695904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1475991695904</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1243,7 +1209,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205259000" />
+    <option name="totallyTimeSpent" value="205497000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1299,6 +1265,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add log system" />
+    <option name="LAST_COMMIT_MESSAGE" value="add log system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
