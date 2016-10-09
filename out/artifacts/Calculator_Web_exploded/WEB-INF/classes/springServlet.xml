@@ -9,7 +9,7 @@
     <mvc:default-servlet-handler/>
 
     <!-- 加载包中的 controller 注解扫描包 -->
-    <context:component-scan base-package="controller, service, dao"/>
+    <context:component-scan base-package="controller, service, dao, constant"/>
 
     <!-- 开启注解 -->
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>

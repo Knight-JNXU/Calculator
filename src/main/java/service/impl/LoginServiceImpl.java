@@ -19,7 +19,7 @@ public class LoginServiceImpl extends BaseServiceImpl implements LoginService {
     @Autowired
     private LoginDao loginDao;
 
-    public boolean checkLogin(HttpServletRequest request, HttpServletResponse response) throws Exception{
-        return loginDao.checkLogin(request, response);
+    public boolean checkLogin(HttpServletRequest request) throws Exception{
+        return loginDao.checkLogin(request);
     }
 }
