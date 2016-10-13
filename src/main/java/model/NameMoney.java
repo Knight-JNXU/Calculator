@@ -29,4 +29,12 @@ public class NameMoney {
     public void setMoney(BigDecimal money) {
         this.money = money;
     }
+
+    @Override
+    public String toString() {
+        return "NameMoney{" +
+                "name='" + name + '\'' +
+                ", money=" + money +
+                '}';
+    }
 }

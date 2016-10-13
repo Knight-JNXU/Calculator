@@ -71,6 +71,8 @@ public class CharacterModel extends BaseModel {
                 "Name='" + Name + '\'' +
                 ", MoneyList=" + MoneyList +
                 ", total=" + total +
+                ", dateList=" + dateList +
+                ", payDateList=" + payDateList +
                 '}';
     }
 }

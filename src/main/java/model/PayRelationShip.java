@@ -47,4 +47,5 @@ public class PayRelationShip {
     public String toString() {
         return fromName+"->"+toName+":"+money;
     }
+
 }

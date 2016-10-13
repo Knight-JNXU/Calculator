@@ -40,4 +40,13 @@ public class PayDateAuthorModel {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    @Override
+    public String toString() {
+        return "PayDateAuthorModel{" +
+                "pay=" + pay +
+                ", date='" + date + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }

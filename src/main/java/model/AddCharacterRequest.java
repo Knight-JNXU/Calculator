@@ -30,4 +30,12 @@ public class AddCharacterRequest extends BaseModel {
     public void setPaymoney(String paymoney) {
         this.paymoney = paymoney;
     }
+
+    @Override
+    public String toString() {
+        return "AddCharacterRequest{" +
+                "username='" + username + '\'' +
+                ", paymoney='" + paymoney + '\'' +
+                '}';
+    }
 }

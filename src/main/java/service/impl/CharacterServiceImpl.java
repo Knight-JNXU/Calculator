@@ -28,7 +28,7 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
         List<CharacterModel> characterModels = new ArrayList<CharacterModel>();
         for(String str : strs){
             String nameStrs[] = str.split(":");
-            if(nameStrs.length > 0){
+            if(nameStrs.length>0 && nameStrs[0].length()>0){
                 String name = nameStrs[0];
                 List<Double> money = new ArrayList<Double>();
                 List<String> dates = new ArrayList<String>();
