@@ -89,7 +89,9 @@ public class CharacterController extends BaseController{
         }else{
             avg = new BigDecimal(all).divide(new BigDecimal(1), 2, RoundingMode.HALF_DOWN);
         }
+        double total = new BigDecimal(all).setScale(2, BigDecimal.ROUND_HALF_DOWN).doubleValue();
         model.addAttribute("avg", avg);
+        model.addAttribute("total", total);
         model.addAttribute("characterlist", list);
         model.addAttribute("characters", JSONArray.fromObject(list).toString());
         System.out.println(JSONArray.fromObject(list).toString());

@@ -22,8 +22,8 @@ $(document).ready(function drawTable() {
     }
     alert(htmls);
     $('#mytable').innerHTML = htmls;*/
-    $('#table1').DataTable({iDisplayLength :100});
-    $('#table2').DataTable();
+    $('#table1').DataTable({"iDisplayLength" :100, "order":[[2, "desc"]]});
+    $('#table2').DataTable({"ordering":false});
     // var tableList = $("[id^='example_']");
     /*for(var i=0; i<tableList.length; i++){
         var id = tableList[i].attr("id");

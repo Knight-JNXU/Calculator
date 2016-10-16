@@ -84,16 +84,20 @@
     </tr>
     </tfoot>
     <tbody>
+    <tr>
+        <td>TOTAL</td>
+        <td>${total}</td>
+    </tr>
+    <tr>
+        <td>AVG</td>
+        <td>${avg}</td>
+    </tr>
     <c:forEach items="${characterlist}" var="item">
         <tr>
             <td>${item.name}</td>
             <td>${item.total}</td>
         </tr>
     </c:forEach>
-    <tr>
-        <td>AVG</td>
-        <td>${avg}</td>
-    </tr>
     </tbody>
 </table>
 <div class="htmleaf-container">
@@ -155,6 +159,7 @@
 </script>
 <div style="height: 300px;">
     <h4>增加支出</h4>
+    插入多条记录可用 "," (英文逗号) 隔开
     <form action="<%=request.getContextPath()%>/characterController/addPayMoney" method="post">
         <select name="username">
             <option value="username">username</option>
