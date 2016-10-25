@@ -22,3 +22,16 @@ function deleteButton(charactername, m, d, a, u) {
     window.location.reload();
 }
 
+function checkAddPaySub() {
+    var username = $('#addPayUserName').val();
+    if(username == "username"){
+        alert("username is null!")
+        return false;
+    }
+    var payValue = $('#payValues').val();
+    if(payValue == ""){
+        alert("pay money is null!");
+        return false;
+    }
+}
+

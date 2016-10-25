@@ -159,15 +159,15 @@
 </script>
 <div style="height: 300px;">
     <h4>增加支出</h4>
-    插入多条记录可用 "," (英文逗号) 隔开
-    <form action="<%=request.getContextPath()%>/characterController/addPayMoney" method="post">
-        <select name="username">
+    插入多条记录可用 ";" (英文分号) 隔开
+    <form action="<%=request.getContextPath()%>/characterController/addPayMoney" method="post" onsubmit="return checkAddPaySub();">
+        <select name="username" id="addPayUserName">
             <option value="username">username</option>
             <c:forEach items="${characterlist}" var="item">
                 <option value="${item.name}">${item.name}</option>
             </c:forEach>
         </select>
-        <input style="height: 32px; margin-left: 15px;"  placeholder="paymoney" type="text" name="paymoney"/>
+        <input style="height: 32px; margin-left: 15px;"  placeholder="paymoney" type="text" name="paymoney" id="payValues"/>
         <input type="submit" class="myButton" value="ADD" style="margin-left: 30px;margin-top: 10px;padding: 3px 4px;">
     </form>
 </div>
