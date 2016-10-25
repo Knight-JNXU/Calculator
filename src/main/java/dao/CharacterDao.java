@@ -1,7 +1,6 @@
 package dao;
 
-import model.AddCharacterRequest;
-import model.Record;
+import model.AddPayMoneyRequest;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,7 +11,7 @@ public interface CharacterDao extends BaseDao {
 
     public String getAllCharacters() throws Exception;
 
-    public void addPayMoney(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception;
+    public void addPayMoney(AddPayMoneyRequest request, HttpServletRequest httpServletRequest) throws Exception;
 
     public void operateCharacter(String characterName, String operateType) throws Exception;
 

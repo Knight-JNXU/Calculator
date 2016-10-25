@@ -39,6 +39,7 @@
         <th>Expenditure</th>
         <th>Date</th>
         <th>Author</th>
+        <th>Remarks</th>
         <th>Operate</th>
     </tr>
     </thead>
@@ -48,6 +49,7 @@
         <th>Expenditure</th>
         <th>Date</th>
         <th>Author</th>
+        <th>Remarks</th>
         <th>Operate</th>
     </tr>
     </tfoot>
@@ -59,6 +61,7 @@
                 <td>${i.pay}</td>
                 <td>${i.date}</td>
                 <td>${i.author}</td>
+                <td>${i.remark}</td>
                 <td><input type="button" value="Delete" class="myButton"
                            style="height:auto;padding: 3 2;"
                            onclick="deleteButton('${item.name}','${i.pay}','${i.date}','${i.author}',
@@ -159,7 +162,7 @@
 </script>
 <div style="height: 300px;">
     <h4>增加支出</h4>
-    插入多条记录可用 ";" (英文分号) 隔开
+    插入多条记录时,多条paymoney、多条remarks用 ";" (英文分号) 隔开
     <form action="<%=request.getContextPath()%>/characterController/addPayMoney" method="post" onsubmit="return checkAddPaySub();">
         <select name="username" id="addPayUserName">
             <option value="username">username</option>
@@ -168,6 +171,7 @@
             </c:forEach>
         </select>
         <input style="height: 32px; margin-left: 15px;"  placeholder="paymoney" type="text" name="paymoney" id="payValues"/>
+        <input style="height: 32px; margin-left: 15px;"  placeholder="remarks" type="text" name="remarks" id="remarksValues"/>
         <input type="submit" class="myButton" value="ADD" style="margin-left: 30px;margin-top: 10px;padding: 3px 4px;">
     </form>
 </div>

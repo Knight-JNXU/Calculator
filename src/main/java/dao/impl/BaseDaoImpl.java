@@ -2,7 +2,7 @@ package dao.impl;
 
 import constant.MyException;
 import dao.BaseDao;
-import model.AddCharacterRequest;
+import model.AddPayMoneyRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.concurrent.Exchanger;
 
 /**
  * Created by Knigh on 2016/9/3.
@@ -143,7 +142,7 @@ public class BaseDaoImpl implements BaseDao {
      * @param httpServletRequest
      * @throws Exception
      */
-    public void addPayMoneyInFile(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception {
+    public void addPayMoneyInFile(AddPayMoneyRequest request, HttpServletRequest httpServletRequest) throws Exception {
         String fileStr = readFileByLines(urlHeader+filePath);
         String fileStrs[] = fileStr.split("\n");
         fileStr = "";
@@ -151,9 +150,10 @@ public class BaseDaoImpl implements BaseDao {
         for (String s : fileStrs) {
             if (s.indexOf(request.getUsername()) == 0) {
                 String moneys[] = request.getPaymoney().split(";");
-                for (String item : moneys){
-                    s += (Double.parseDouble(item) + "," + dateFormat.format(Calendar.getInstance().getTime()) + ","
-                            + author + ",");
+                String remarks[] = request.getRemarks().split(";");
+                for (int i=0; i<moneys.length; i++){
+                    s += (Double.parseDouble(moneys[i]) + "," + dateFormat.format(Calendar.getInstance().getTime()) + ","
+                            + author + "," + remarks[i] + ",");
                 }
             }
             fileStr += (s + changeLineStr);

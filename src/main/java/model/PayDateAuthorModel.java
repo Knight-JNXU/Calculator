@@ -7,14 +7,16 @@ public class PayDateAuthorModel {
     private double pay;
     private String date;
     private String author;
+    private String remark;
 
     public PayDateAuthorModel() {
     }
 
-    public PayDateAuthorModel(double pay, String date, String author) {
+    public PayDateAuthorModel(double pay, String date, String author, String remark) {
         this.pay = pay;
         this.date = date;
         this.author = author;
+        this.remark = remark;
     }
 
     public double getPay() {
@@ -41,12 +43,21 @@ public class PayDateAuthorModel {
         this.author = author;
     }
 
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
     @Override
     public String toString() {
         return "PayDateAuthorModel{" +
                 "pay=" + pay +
                 ", date='" + date + '\'' +
                 ", author='" + author + '\'' +
+                ", remark='" + remark + '\'' +
                 '}';
     }
 }

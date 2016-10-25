@@ -1,11 +1,10 @@
 package dao.impl;
 
 import dao.CharacterDao;
-import model.AddCharacterRequest;
+import model.AddPayMoneyRequest;
 import org.springframework.stereotype.Repository;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
 
 /**
  * Created by Knigh on 2016/9/3.
@@ -17,7 +16,7 @@ public class CharacterDaoImpl extends BaseDaoImpl implements CharacterDao {
         return readFileByLines(urlHeader+filePath);
     }
 
-    public void addPayMoney(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception{
+    public void addPayMoney(AddPayMoneyRequest request, HttpServletRequest httpServletRequest) throws Exception{
         addPayMoneyInFile(request, httpServletRequest);
     }
 

@@ -22,6 +22,8 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
     @Autowired
     private CharacterDao characterDao;
 
+    private int noteNum = 4;  //每个单元所包含的信息
+
     public List<CharacterModel> getAllCharacters() throws Exception{
         String characterStr = characterDao.getAllCharacters();
         String strs[] = characterStr.split("\\\n");
@@ -42,20 +44,24 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
                     PayDateAuthorModel payDateAuthorModel = null;
                     for(int i=0; i<moneyStrs.length; i++){
                         String m = moneyStrs[i];
-                        if(i%3 == 0){
+                        if(i%noteNum == 0){
                             payDateAuthorModel = new PayDateAuthorModel();
                             money.add(new Double(m));
                             total += Double.parseDouble(m);
                             payDateAuthorModel.setPay(new Double(m));
                         }else{
-                            if(i%3 == 1){
+                            if(i%noteNum == 1){
                                 date = m;
                                 dates.add(date);
                                 payDateAuthorModel.setDate(m);
                             }else{
-                                author = m;
-                                payDateAuthorModel.setAuthor(author);
-                                payDateAuthorModelList.add(payDateAuthorModel);
+                                if(i%noteNum == 2){
+                                    author = m;
+                                    payDateAuthorModel.setAuthor(author);
+                                }else{
+                                    payDateAuthorModel.setRemark(m);
+                                    payDateAuthorModelList.add(payDateAuthorModel);
+                                }
                             }
 
                         }
@@ -142,7 +148,7 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
         return payRelationShipList;
     }
 
-    public void addPayMoney(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception{
+    public void addPayMoney(AddPayMoneyRequest request, HttpServletRequest httpServletRequest) throws Exception{
         characterDao.addPayMoney(request, httpServletRequest);
     }
 

@@ -11,9 +11,7 @@ import service.CharacterService;
 import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Knigh on 2016/9/3.
@@ -56,7 +54,7 @@ public class CharacterController extends BaseController{
     }
 
     @RequestMapping(value = "/addPayMoney", method = RequestMethod.POST)
-    public String addPayMoney(AddCharacterRequest request, HttpServletRequest httpServletRequest) throws Exception{
+    public String addPayMoney(AddPayMoneyRequest request, HttpServletRequest httpServletRequest) throws Exception{
         characterService.addPayMoney(request, httpServletRequest);
         return "redirect:/characterController/showDetails";
     }

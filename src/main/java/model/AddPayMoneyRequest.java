@@ -3,16 +3,18 @@ package model;
 /**
  * Created by Knigh on 2016/9/13.
  */
-public class AddCharacterRequest extends BaseModel {
+public class AddPayMoneyRequest extends BaseModel {
     private String username;
     private String paymoney;
+    private String remarks;
 
-    public AddCharacterRequest() {
+    public AddPayMoneyRequest() {
     }
 
-    public AddCharacterRequest(String username, String paymoney) {
+    public AddPayMoneyRequest(String username, String paymoney, String remarks) {
         this.username = username;
         this.paymoney = paymoney;
+        this.remarks = remarks;
     }
 
     public String getUsername() {
@@ -31,11 +33,20 @@ public class AddCharacterRequest extends BaseModel {
         this.paymoney = paymoney;
     }
 
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
     @Override
     public String toString() {
-        return "AddCharacterRequest{" +
+        return "AddPayMoneyRequest{" +
                 "username='" + username + '\'' +
                 ", paymoney='" + paymoney + '\'' +
+                ", remarks='" + remarks + '\'' +
                 '}';
     }
 }
