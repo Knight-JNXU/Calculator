@@ -6,14 +6,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <mvc:annotation-driven/>
-    <!--<mvc:default-servlet-handler/>-->
 
     <!-- 加载包中的 controller 注解扫描包 -->
     <context:component-scan base-package="controller, service, dao, constant"/>
-
-    <!--&lt;!&ndash; 开启注解 &ndash;&gt;-->
-    <!--<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>-->
-    <!--<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>-->
 
     <!-- 静态资源访问 -->
     <mvc:resources mapping="/js/**" location="/js/"/>

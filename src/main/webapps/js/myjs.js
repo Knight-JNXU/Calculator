@@ -22,6 +22,17 @@ function deleteButton(charactername, m, d, a, u) {
     window.location.reload();
 }
 
+function contansSemicolon(str){
+    var chars = str.match(/./g);
+    var sum = 0;
+    for(var i=0; i<chars.length; i++){
+        if(chars[i] == ';'){
+            sum++;
+        }
+    }
+    return sum;
+}
+
 function checkAddPaySub() {
     var username = $('#addPayUserName').val();
     if(username == "username"){
@@ -33,5 +44,19 @@ function checkAddPaySub() {
         alert("pay money is null!");
         return false;
     }
+    var remarks = $('#remarksValues').val();
+    if(payValue.indexOf(";") != -1){
+        if(remarks == ""){
+            alert("remarks数量和paymoney数量不一致!");
+            return false;
+        }
+        var payVS = contansSemicolon(payValue);
+        var remarkS = contansSemicolon(remarks);
+        if(remarkS != payVS){
+            alert("remarks数量和paymoney数量不一致!");
+            return false;
+        }
+    }
+    return true;
 }
 

@@ -1,5 +1,6 @@
 package service.impl;
 
+import constant.MyException;
 import dao.CharacterDao;
 import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -148,7 +149,28 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
         return payRelationShipList;
     }
 
+    /**
+     * 返回 str 中 ; 的数量
+     * @param str
+     * @return
+     */
+    private int getSemicolonNum(String str){
+        char chars[] = str.toCharArray();
+        int sum = 0;
+        for(int i=0; i<chars.length; i++){
+            if(chars[i] == ';'){
+                sum++;
+            }
+        }
+        return sum;
+    }
+
     public void addPayMoney(AddPayMoneyRequest request, HttpServletRequest httpServletRequest) throws Exception{
+        if(request.getPaymoney().contains(";") || request.getRemarks().contains(";")){
+            if(getSemicolonNum(request.getPaymoney()) != getSemicolonNum(request.getRemarks())){
+                throw new MyException("semicolon is not equal in paymony and remarks!");
+            }
+        }
         characterDao.addPayMoney(request, httpServletRequest);
     }
 
