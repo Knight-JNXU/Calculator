@@ -175,6 +175,12 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
     }
 
     public void operateCharacter(String characterName, String operateType) throws Exception {
+        if(characterName==""){
+            throw new MyException("characterName is null!");
+        }
+        if(!operateType.equals("add") && !operateType.equals("delete")){
+            throw new MyException("operation is null!");
+        }
         characterDao.operateCharacter(characterName, operateType);
     }
 

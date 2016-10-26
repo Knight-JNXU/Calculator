@@ -1,6 +1,20 @@
 /**
  * Created by Knigh on 2016/9/15.
  */
+
+/**
+ * 角色操作过滤
+ * @returns {boolean}
+ */
+function checkOpChar() {
+    var characterName = $('#input-1').val();
+    if(characterName=="" || typeof(characterName)=="undefined"){
+        alert("UserName is null!");
+        return false;
+    }
+    return true;
+}
+
 function chekcSubmit() {
     var u = $('#u').val();
     var p1 = $('#p').val();
@@ -11,6 +25,14 @@ function chekcSubmit() {
     }
     return true;
 }
+/**
+ * 删除按钮
+ * @param charactername
+ * @param m
+ * @param d
+ * @param a
+ * @param u
+ */
 function deleteButton(charactername, m, d, a, u) {
     $.ajax({
         type:'POST',
@@ -21,7 +43,11 @@ function deleteButton(charactername, m, d, a, u) {
     });
     window.location.reload();
 }
-
+/**
+ * 返回 str 中 ; 的数量
+ * @param str
+ * @returns {number}
+ */
 function contansSemicolon(str){
     var chars = str.match(/./g);
     var sum = 0;
@@ -32,7 +58,10 @@ function contansSemicolon(str){
     }
     return sum;
 }
-
+/**
+ * add paymony 过滤
+ * @returns {boolean}
+ */
 function checkAddPaySub() {
     var username = $('#addPayUserName').val();
     if(username == "username"){

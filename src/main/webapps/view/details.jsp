@@ -105,7 +105,7 @@
 </table>
 <div class="htmleaf-container">
     <h4>操作角色</h4>
-    <form action="<%=request.getContextPath()%>/characterController/operateCharacter" method="post">
+    <form action="<%=request.getContextPath()%>/characterController/operateCharacter" method="post" onsubmit="return checkOpChar();">
         <section class="jq22-content bgcolor-1">
         <span class="input input--nao">
 					<input class="input__field input__field--nao" type="text" id="input-1" name="characterName"/>
