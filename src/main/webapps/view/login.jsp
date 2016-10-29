@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <head>
-    <title>login</title>
+    <title>cal</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="../images/login.js"></script>
