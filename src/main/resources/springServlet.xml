@@ -15,6 +15,7 @@
     <mvc:resources mapping="/css/**" location="/css/"/>
     <mvc:resources mapping="/images/**" location="/images/"/>
     <mvc:resources mapping="/fonts/**" location="/fonts/"/>
+    <mvc:resources mapping="/htmls/**" location="/view/htmls/"/>
 
     <!-- 视图解析器 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -33,6 +34,7 @@
             <mvc:exclude-mapping path="/css/**"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/images/**"/> <!-- 无需拦截的请求 -->
             <mvc:exclude-mapping path="/fonts/**"/> <!-- 无需拦截的请求 -->
+            <mvc:exclude-mapping path="/htmls/**"/> <!-- 无需拦截的请求 -->
             <bean class="constant.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
