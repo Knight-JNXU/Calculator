@@ -6,6 +6,7 @@
 <html lang="zh" class="no-js">
 <head>
     <title>details</title>
+    <link rel="Shortcut Icon" href="../images/icon1.jpg">
 </head>
 <script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>

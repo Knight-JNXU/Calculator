@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>result</title>
+    <link rel="Shortcut Icon" href="../images/icon1.jpg">
     <style>
         body{ background-color: #F9F6EF; color: #494949; }
         .jq22-content{ width: 900px; height: auto; margin-left: auto; margin-right: auto; padding: 20px; border: 1px solid #D0D0D0; background-color: #EFEFEF; margin-top: 50px; font-weight: bold; line-height: 24px; }

@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>login</title>
+    <link rel="Shortcut Icon" href="../images/icon1.jpg">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
