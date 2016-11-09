@@ -204,14 +204,15 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
         String recordStrs[] = nameData[1].split(",");
         String temp = nameData[0]+":";
         boolean isDelete = false;
-        for(int i=0; i<recordStrs.length; i+=3){
+        for(int i=0; i<recordStrs.length; i+=4){
             if(recordStrs[i].equals(record.getMoney())
                     && recordStrs[i+1].equals(record.getDate())
                     && recordStrs[i+2].equals(record.getAuthor())
+                    && recordStrs[i+3].equals(record.getMark())
                     && isDelete==false){
                 isDelete = true;
             }else{
-                temp += (recordStrs[i]+","+recordStrs[i+1]+","+recordStrs[2]+",");
+                temp += (recordStrs[i]+","+recordStrs[i+1]+","+recordStrs[i+2]+","+recordStrs[i+3]+",");
             }
         }
         resultStr += temp;

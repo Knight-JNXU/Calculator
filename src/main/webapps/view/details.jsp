@@ -30,6 +30,9 @@
 <input type="button" class="myButton" value="Logout"
        onclick="window.location='<%=request.getContextPath()%>/userController/logout'"
        style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">
+<input type="button" class="myButton" value="Manager"
+       onclick="window.location='/userController/goManager'"
+       style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">
 <h4>明细表</h4>
 <table id="table1" class="display" cellspacing="0" width="100%"
        style="font-family: Arial;text-align: center;">
@@ -64,7 +67,7 @@
                 <td>${i.remark}</td>
                 <td><input type="button" value="Delete" class="myButton"
                            style="height:auto;padding: 3 2;"
-                           onclick="deleteButton('${item.name}','${i.pay}','${i.date}','${i.author}',
+                           onclick="deleteButton('${item.name}','${i.pay}','${i.date}','${i.author}','${i.remark}',
                                    '/characterController/deleteRecord')"></td>
             </tr>
         </c:forEach>

@@ -33,13 +33,13 @@ function chekcSubmit() {
  * @param a
  * @param u
  */
-function deleteButton(charactername, m, d, a, u) {
+function deleteButton(charactername, m, d, a, mark, u) {
     $.ajax({
         type:'POST',
         url:u,
         dataType:'json',
         data:{charactername:charactername,
-            money:m, date:d, author:a}
+            money:m, date:d, author:a, mark:mark}
     });
     window.location.reload();
 }

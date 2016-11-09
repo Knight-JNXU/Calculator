@@ -8,15 +8,17 @@ public class Record extends BaseModel {
     private String money;
     private String date;
     private String author;
+    private String mark;
 
     public Record() {
     }
 
-    public Record(String charactername, String money, String date, String author) {
+    public Record(String charactername, String money, String date, String author, String mark) {
         this.charactername = charactername;
         this.money = money;
         this.date = date;
         this.author = author;
+        this.mark = mark;
     }
 
     public String getCharactername() {
@@ -51,6 +53,14 @@ public class Record extends BaseModel {
         this.author = author;
     }
 
+    public String getMark() {
+        return mark;
+    }
+
+    public void setMark(String mark) {
+        this.mark = mark;
+    }
+
     @Override
     public String toString() {
         return "Record{" +
@@ -58,6 +68,7 @@ public class Record extends BaseModel {
                 ", money='" + money + '\'' +
                 ", date='" + date + '\'' +
                 ", author='" + author + '\'' +
+                ", mark='" + mark + '\'' +
                 '}';
     }
 }
