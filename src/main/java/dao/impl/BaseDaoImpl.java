@@ -1,15 +1,21 @@
 package dao.impl;
 
+import constant.EmailUtil;
 import constant.MyException;
 import dao.BaseDao;
 import model.AddPayMoneyRequest;
+import model.CharacterModel;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Knigh on 2016/9/3.
@@ -27,6 +33,38 @@ public class BaseDaoImpl implements BaseDao {
     protected final String trashPath = "/file/trash";
     protected final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
     protected final String changeLineStr = "\n";
+    private static Logger logger = Logger.getLogger(BaseDaoImpl.class);
+    protected final EmailUtil emailUtil = new EmailUtil();
+
+    /**
+     * 创建文件
+     * @param list
+     * @throws Exception
+     */
+    protected void createFile(List<CharacterModel> list) throws Exception {
+        try {
+            File file = new File(urlHeader+filePath);
+            String fileStr = "";
+            Date date = new Date();
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd");
+            String dateStr = dateFormat.format(date);
+            StringBuffer logInfo = new StringBuffer("pushdown:[");
+            for(CharacterModel model : list){
+                logInfo.append(model.getName()+":"+model.getTotal()+",");
+                fileStr += model.getName()+":"+model.getTotal()+","+dateStr.toString()+"遗留,\n";
+            }
+            logInfo.deleteCharAt(logInfo.length()-1);
+            logInfo.append("]");
+            logger.info(logInfo.toString());
+            FileWriter fw = new FileWriter(file);
+            fw.write(fileStr);
+            file.createNewFile();
+            fw.flush();
+            fw.close();
+        }catch (IOException e) {
+            throw new MyException("create file error!");
+        }
+    }
 
     /**
      * 保存文件
@@ -40,7 +78,7 @@ public class BaseDaoImpl implements BaseDao {
             fw.write(fileContent);
             fw.close();
         }catch (Exception e){
-            throw new MyException("save file erro!");
+            throw new MyException("save file error!");
         }
     }
 

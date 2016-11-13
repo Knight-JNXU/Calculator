@@ -5,6 +5,7 @@ import dao.CharacterDao;
 import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import service.CharacterService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -184,6 +185,23 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
         characterDao.operateCharacter(characterName, operateType);
     }
 
+    /**
+     * 下推
+     * @param request
+     * @param model
+     * @throws Exception
+     */
+    public void pushdown(HttpServletRequest request, Model model) throws Exception{
+        try {
+            List<CharacterModel> list = getAllCharacters();
+            characterDao.clear();
+            characterDao.create(list);
+        }catch (Exception e){
+            throw new MyException("pushdown error!");
+        }
+    }
+
+    //清空
     public void clear() throws Exception {
         characterDao.clear();
     }

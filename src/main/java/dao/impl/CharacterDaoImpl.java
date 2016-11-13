@@ -2,9 +2,11 @@ package dao.impl;
 
 import dao.CharacterDao;
 import model.AddPayMoneyRequest;
+import model.CharacterModel;
 import org.springframework.stereotype.Repository;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by Knigh on 2016/9/3.
@@ -30,6 +32,10 @@ public class CharacterDaoImpl extends BaseDaoImpl implements CharacterDao {
 
     public void deleteRecord(String fileContent) throws Exception {
         save(fileContent);
+    }
+
+    public void create(List<CharacterModel> list) throws Exception {
+        createFile(list);
     }
 
 }

@@ -31,6 +31,15 @@ public class CharacterController extends BaseController{
         return "redirect:/characterController/showDetails";
     }
 
+    @RequestMapping(value = "/pushdown")
+    public String pushdown(HttpServletRequest request, Model model) throws Exception{
+        characterService.pushdown(request, model);
+        String resultStr = "下推成功!";
+        model.addAttribute("resultStr", resultStr);
+        model.addAttribute("targetUrl", (request.getContextPath()+"/userController/goManager"));
+        return "result";
+    }
+
     @RequestMapping(value = "/clear")
     public String clear(HttpServletRequest request, Model model) throws Exception{
         characterService.clear();

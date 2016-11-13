@@ -51,6 +51,11 @@
                            class="button_blue"
                            onclick="window.location='<%=request.getContextPath()%>/characterController/showDetails'"/>
 
+                    <input type="button" value="下   推"
+                           style="width:150px;margin-top: 20px;"
+                           class="button_blue"
+                           onclick="window.location='<%=request.getContextPath()%>/characterController/pushdown'"/>
+
                     <input type="button" value="清   空"
                            style="width:150px;margin-top: 20px;"
                            class="button_blue"

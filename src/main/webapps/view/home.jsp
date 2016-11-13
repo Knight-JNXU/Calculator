@@ -42,7 +42,6 @@
         </div>
     </div>
 
-    <!--注册-->
     <div class="qlogin" id="qlogin" style="display: none; ">
 
         <div class="web_login" style="height: 180px;">
@@ -71,7 +70,6 @@
             </ul>
         </div>
     </div>
-    <!--注册end-->
 
 </div>
 </body>
