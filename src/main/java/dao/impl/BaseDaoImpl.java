@@ -1,11 +1,12 @@
 package dao.impl;
 
-import constant.EmailUtil;
 import constant.MyException;
 import dao.BaseDao;
+import dao.EmailDao;
 import model.AddPayMoneyRequest;
 import model.CharacterModel;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -34,7 +35,8 @@ public class BaseDaoImpl implements BaseDao {
     protected final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
     protected final String changeLineStr = "\n";
     private static Logger logger = Logger.getLogger(BaseDaoImpl.class);
-    protected final EmailUtil emailUtil = new EmailUtil();
+    @Autowired
+    private EmailDao emailDao;
 
     /**
      * 创建文件
@@ -46,15 +48,16 @@ public class BaseDaoImpl implements BaseDao {
             File file = new File(urlHeader+filePath);
             String fileStr = "";
             Date date = new Date();
-            DateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd");
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
             String dateStr = dateFormat.format(date);
             StringBuffer logInfo = new StringBuffer("pushdown:[");
             for(CharacterModel model : list){
                 logInfo.append(model.getName()+":"+model.getTotal()+",");
-                fileStr += model.getName()+":"+model.getTotal()+","+dateStr.toString()+"遗留,\n";
+                fileStr += model.getName()+":"+model.getTotal()+","+dateStr.toString()+",admin,遗留,\n";
             }
             logInfo.deleteCharAt(logInfo.length()-1);
             logInfo.append("]");
+            emailDao.sentTextEmail(logInfo.toString());
             logger.info(logInfo.toString());
             FileWriter fw = new FileWriter(file);
             fw.write(fileStr);

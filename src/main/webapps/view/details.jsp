@@ -32,7 +32,7 @@
        onclick="window.location='<%=request.getContextPath()%>/userController/logout'"
        style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">
 <input type="button" class="myButton" value="Manager"
-       onclick="window.location='/userController/goManager'"
+       onclick="window.location='<%=request.getContextPath()%>/userController/goManager'"
        style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;">
 <h4>明细表</h4>
 <table id="table1" class="display" cellspacing="0" width="100%"

@@ -197,6 +197,7 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
             characterDao.clear();
             characterDao.create(list);
         }catch (Exception e){
+            e.printStackTrace();
             throw new MyException("pushdown error!");
         }
     }
