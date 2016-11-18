@@ -2,6 +2,8 @@ package dao.impl;
 
 import constant.MyException;
 import dao.EmailDao;
+import model.CharacterModel;
+import model.PayDateAuthorModel;
 import org.springframework.stereotype.Repository;
 
 import javax.mail.*;
@@ -9,6 +11,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -33,7 +36,8 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
     //收件人
 //    private static final String to = "18702510536@sina.cn";
     private final String to1 = "1990785022@qq.com";
-    private final String to2 = "2275617895@qq.com";
+    private final String to2 = "m18702510536_3@163.com";
+//    private final String to2 = "2275617895@qq.com";
     //初始化连接邮件服务器的会话信息
     private static Properties properties = null;
 
@@ -96,6 +100,47 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
         @Override
         protected PasswordAuthentication getPasswordAuthentication() {
             return new PasswordAuthentication(username, password);
+        }
+    }
+
+    /**
+     * 发送html邮件
+     * @param list
+     */
+    public void sendHtmlEmail(List<CharacterModel> list){
+        try {
+            //创建Session实例对象
+            Session session = Session.getInstance(properties, new MyAuthenticator());
+            //创建MimeMessage实例对象
+            MimeMessage message = new MimeMessage(session);
+            //设置邮件主题
+            message.setSubject("pushdown:["+ (new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")).format(new Date())+"]");
+            //设置发送人
+            message.setFrom(new InternetAddress(from));
+            //设置发送时间
+            message.setSentDate(new Date());
+            //设置收件人
+            InternetAddress[] address = {new InternetAddress(to1), new InternetAddress(to2)};
+            message.setRecipients(Message.RecipientType.TO, address);
+            StringBuffer sb = new StringBuffer("<table border='1' style='text-align:center;'>" +
+                    "<tr><th>Name</th><th>Expenditure</th><th>Date</th><th>Author</th><th>Remarks</th></tr>");
+            for(CharacterModel character : list){
+                sb.append("<tr><td>"+character.getName()+"</td><td>"+character.getTotal()+"</td><td>"+(new SimpleDateFormat("yyyy-MM-dd")).format(new Date())+"</td><td>admin</td><td>total</td></tr>");
+                List<PayDateAuthorModel> payDateList = character.getPayDateList();
+                for(PayDateAuthorModel model : payDateList){
+                    sb.append("<tr><td>"+model.getName()+"</td><td>"+model.getPay()+"</td><td>"+model.getDate()+"</td><td>"+model.getAuthor()+"</td><td>"+model.getRemark()+"</td></tr>");
+                }
+            }
+            sb.append("</table>");
+            //设置html内容为邮件正文，指定MIME类型为text/html类型，并指定字符编码为utf-8
+//            message.setContent("<span style='color:red;'>html邮件测试...</span>", "text/html;charset=utf-8");
+            message.setContent(sb.toString(), "text/html;charset=utf-8");
+            //保存并生成最终的邮件内容
+            message.saveChanges();
+            //发送邮件
+            Transport.send(message);
+        } catch (MessagingException e) {
+            e.printStackTrace();
         }
     }
 

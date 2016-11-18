@@ -50,6 +50,7 @@ public class CharacterServiceImpl extends BaseServiceImpl implements CharacterSe
                             payDateAuthorModel = new PayDateAuthorModel();
                             money.add(new Double(m));
                             total += Double.parseDouble(m);
+                            payDateAuthorModel.setName(name);
                             payDateAuthorModel.setPay(new Double(m));
                         }else{
                             if(i%noteNum == 1){

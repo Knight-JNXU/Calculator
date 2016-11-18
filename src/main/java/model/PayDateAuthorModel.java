@@ -4,6 +4,7 @@ package model;
  * Created by Knigh on 2016/9/13.
  */
 public class PayDateAuthorModel {
+    private String name;
     private double pay;
     private String date;
     private String author;
@@ -12,11 +13,20 @@ public class PayDateAuthorModel {
     public PayDateAuthorModel() {
     }
 
-    public PayDateAuthorModel(double pay, String date, String author, String remark) {
+    public PayDateAuthorModel(String name, double pay, String date, String author, String remark) {
+        this.name = name;
         this.pay = pay;
         this.date = date;
         this.author = author;
         this.remark = remark;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getPay() {
@@ -54,7 +64,8 @@ public class PayDateAuthorModel {
     @Override
     public String toString() {
         return "PayDateAuthorModel{" +
-                "pay=" + pay +
+                "name='" + name + '\'' +
+                ", pay=" + pay +
                 ", date='" + date + '\'' +
                 ", author='" + author + '\'' +
                 ", remark='" + remark + '\'' +

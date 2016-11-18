@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="required">
             <%--<input type="submit" value="ABOUT" onclick="window.location='<%=request.getContextPath()%>/userController/about'">--%>
-            <input type="submit" value="ABOUT" onclick="window.location='/htmls/about.html'">
+            <input type="submit" value="ABOUT" onclick="window.location='/cal/htmls/about.html'">
         </div>
         <div class="clearfix"> </div>
     </div>

@@ -5,6 +5,7 @@ import dao.BaseDao;
 import dao.EmailDao;
 import model.AddPayMoneyRequest;
 import model.CharacterModel;
+import model.PayDateAuthorModel;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -50,14 +51,21 @@ public class BaseDaoImpl implements BaseDao {
             Date date = new Date();
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
             String dateStr = dateFormat.format(date);
-            StringBuffer logInfo = new StringBuffer("pushdown:[");
+            StringBuffer logInfo = new StringBuffer("pushdown:\n");
+            logInfo.append("Name\t Expenditure\t Date\t Author\t Remarks\t\n");
             for(CharacterModel model : list){
-                logInfo.append(model.getName()+":"+model.getTotal()+",");
+                /*logInfo.append(model.getName()+":"+model.getTotal()+",");*/
                 fileStr += model.getName()+":"+model.getTotal()+","+dateStr.toString()+",admin,遗留,\n";
+                logInfo.append(model.getName()+"\t "+model.getTotal()+"\t admin\t "+(new SimpleDateFormat("yyyy-MM-dd")).format(new Date())+"\t total\t\n");
+                List<PayDateAuthorModel> payList = model.getPayDateList();
+                for(PayDateAuthorModel pay : payList){
+                    logInfo.append(pay.getName()+"\t "+pay.getPay()+"\t "+pay.getDate()+"\t "+pay.getAuthor()+"\t "+pay.getRemark()+"\t\n");
+                }
             }
-            logInfo.deleteCharAt(logInfo.length()-1);
-            logInfo.append("]");
-            emailDao.sentTextEmail(logInfo.toString());
+//            logInfo.deleteCharAt(logInfo.length()-1);
+            logInfo.append("pushdown end!");
+//            emailDao.sentTextEmail(logInfo.toString());
+            emailDao.sendHtmlEmail(list);
             logger.info(logInfo.toString());
             FileWriter fw = new FileWriter(file);
             fw.write(fileStr);
