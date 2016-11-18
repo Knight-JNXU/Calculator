@@ -36,8 +36,8 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
     //收件人
 //    private static final String to = "18702510536@sina.cn";
     private final String to1 = "1990785022@qq.com";
-    private final String to2 = "m18702510536_3@163.com";
-//    private final String to2 = "2275617895@qq.com";
+//    private final String to2 = "m18702510536_3@163.com";
+    private final String to2 = "2275617895@qq.com";
     //初始化连接邮件服务器的会话信息
     private static Properties properties = null;
 
