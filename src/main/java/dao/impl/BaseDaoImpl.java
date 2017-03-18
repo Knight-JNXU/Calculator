@@ -73,7 +73,7 @@ public class BaseDaoImpl implements BaseDao {
             fw.flush();
             fw.close();
         }catch (IOException e) {
-            throw new MyException("create file error!");
+            throw new MyException("create file or send emails error!");
         }
     }
 

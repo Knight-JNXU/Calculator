@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface EmailDao {
     public void sentTextEmail(String mes) throws Exception;
-    public void sendHtmlEmail(List<CharacterModel> list);
+    public void sendHtmlEmail(List<CharacterModel> list) throws Exception;
 }

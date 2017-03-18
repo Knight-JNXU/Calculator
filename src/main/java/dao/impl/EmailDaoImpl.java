@@ -4,6 +4,7 @@ import constant.MyException;
 import dao.EmailDao;
 import model.CharacterModel;
 import model.PayDateAuthorModel;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import javax.mail.*;
@@ -19,11 +20,13 @@ import java.util.Properties;
  */
 @Repository
 public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
+
+    @Value("#{'${emails}'.split(',')}")
+    protected List<String> emails;
     //邮件发送协议
     private final String PROTOCOL = "smtp";
     //from(发送方)的smtp邮件服务器(这个东西可以在sina邮箱设置的客户端pop/imap/smtp中查看)
     private final String HOST = "smtp.sina.cn";
-    //    private final static String HOST = "smtp.163.com";
     //smtp邮件服务器默认端口
     private final String PORT = "25";
     //是否要求身份认证
@@ -31,13 +34,9 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
     //是否启用调试模式（启用调试模式可打印客户端与服务器交互过程时一问一答的响应消息）
     private final String IS_ENABLED_DEBUG_MOD = "true";
     //发件人
-//    private static final String from = "m18702510536_3@163.com";
-    private static String from = "18702510536@sina.cn";
+    private static final String from = "knightdevelop@sina.com";
     //收件人
-//    private static final String to = "18702510536@sina.cn";
     private final String to1 = "1990785022@qq.com";
-//    private final String to2 = "m18702510536_3@163.com";
-    private final String to2 = "2275617895@qq.com";
     //初始化连接邮件服务器的会话信息
     private static Properties properties = null;
 
@@ -68,7 +67,11 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
 //            message.setSubject("pushdown:["+ (new SimpleDateFormat("yyyy-mm-dd hh:mm:ss")).format(new Date())+"]");
             message.setSubject("pushdown:["+ (new SimpleDateFormat("yyyy-mm-dd hh:mm:ss")).format(new Date())+"]");
             //设置收件人
-            InternetAddress[] address = {new InternetAddress(to1), new InternetAddress(to2)};
+            InternetAddress[] address = new InternetAddress[emails.size()];
+            for(int i=0; i<emails.size(); i++){
+                address[i] = new InternetAddress(emails.get(i));
+            }
+//            InternetAddress[] address = {new InternetAddress(to1), new InternetAddress(to2)};
             message.setRecipients(Message.RecipientType.TO, address);
             //设置发送时间
             message.setSentDate(new Date());
@@ -93,8 +96,7 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
     }
 
     private static class MyAuthenticator extends Authenticator {
-        private String username = "18702510536";
-        //        private String password = "lw231029";
+        private String username = "knightdevelop@sina.com";
         private String password = "231029";
 
         @Override
@@ -107,20 +109,25 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
      * 发送html邮件
      * @param list
      */
-    public void sendHtmlEmail(List<CharacterModel> list){
+    public void sendHtmlEmail(List<CharacterModel> list) throws Exception{
         try {
             //创建Session实例对象
             Session session = Session.getInstance(properties, new MyAuthenticator());
             //创建MimeMessage实例对象
             MimeMessage message = new MimeMessage(session);
             //设置邮件主题
-            message.setSubject("pushdown:["+ (new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")).format(new Date())+"]");
+            message.setSubject("一封信");
+//            message.setSubject("pushdown:["+ (new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")).format(new Date())+"]");
             //设置发送人
             message.setFrom(new InternetAddress(from));
             //设置发送时间
             message.setSentDate(new Date());
             //设置收件人
-            InternetAddress[] address = {new InternetAddress(to1), new InternetAddress(to2)};
+            InternetAddress[] address = new InternetAddress[emails.size()];
+            for(int i=0; i<emails.size(); i++){
+                address[i] = new InternetAddress(emails.get(i));
+            }
+//            InternetAddress[] address = {new InternetAddress(to1), new InternetAddress(to2)};
             message.setRecipients(Message.RecipientType.TO, address);
             StringBuffer sb = new StringBuffer("<table border='1' style='text-align:center;'>" +
                     "<tr><th>Name</th><th>Expenditure</th><th>Date</th><th>Author</th><th>Remarks</th></tr>");
@@ -141,6 +148,7 @@ public class EmailDaoImpl extends BaseDaoImpl implements EmailDao{
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();
+            throw e;
         }
     }
 

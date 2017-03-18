@@ -27,18 +27,18 @@ public class LoginDaoImpl extends BaseDaoImpl implements LoginDao {
     public boolean checkLogin(HttpServletRequest request) throws Exception{
         String un = request.getParameter("username");
         String pw = request.getParameter("password");
-        String userFile = readFileByLines((urlHeader+userFilePath));
-        String strs[] = userFile.split("\\\n");
-        if(strs.length > 1){
-            String nameStr[] = strs[0].split(",");
-            String passwdStr[] = strs[1].split(",");
-            for (int i=0; i<nameStr.length; i++){
-                if(un.equals(nameStr[i]) && pw.equals(passwdStr[i])){
-                    request.getSession().setAttribute("user", un);
-                    return true;
-                }
-            }
-        }
+//        String userFile = readFileByLines((urlHeader+userFilePath));
+//        String strs[] = userFile.split("\\\n");
+//        if(strs.length > 1){
+//            String nameStr[] = strs[0].split(",");
+//            String passwdStr[] = strs[1].split(",");
+//            for (int i=0; i<nameStr.length; i++){
+//                if(un.equals(nameStr[i]) && pw.equals(passwdStr[i])){
+//                    request.getSession().setAttribute("user", un);
+//                    return true;
+//                }
+//            }
+//        }
         for(int i=0; i<usernames.size(); i++){
             String username = usernames.get(i);
             String passwd = passwords.get(i);
